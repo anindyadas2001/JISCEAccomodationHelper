@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JISCE Accomodation Pricing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9CAFAA;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #FBF3D5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        input {
+            background-color: #EFBC9B;
+            color: #607274;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input:hover {
+            background-color: #d78d5b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>JISCE Accomodation Pricing</h2>
+
+    <form action="/predict" method="post">
+
+        <div>
+            <label for="Distance from target Institution">Distance from target Institution :</label>
+            <select id="Distance from target Institution" name="Distance from target Institution">
+                <option value="Close (within 500m)">Close (within 500m)</option>
+                <option value="Not close">Not close</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="Is the accommodation furnished?">Is the accommodation furnished? :</label>
+            <select id="Is the accommodation furnished?" name="Is the accommodation furnished?">
+                <option value="Furnished">Furnished</option>
+                <option value="Not Furnished">Not Furnished</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="Type of accommodation rented">Type of accommodation rented :</label>
+            <select id="Type of accommodation rented" name="Type of accommodation rented">
+                <option value="AC">AC</option>
+                <option value="Non-AC">Non-AC</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="Is food facility available?">Is food facility available? :</label>
+            <select id="Is food facility available?" name="Is food facility available?">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="Type of food facility">Type of food facility :</label>
+            <select id="Type of food facility" name="Type of food facility">
+                <option value="none">none</option>
+                <option value="Veg & Non-veg">Veg & Non-veg</option>
+                <option value="Only veg">Only veg</option>
+            </select>
+        </div>
+        <br>
+        <!-- <button type="submit">Submit</button> -->
+        <input type="submit" value="Calculate Approximate Price">
+    </form>
+</body>
+</html>
